@@ -1,9 +1,16 @@
-;Nombre:                        -
+;TEC,Cartago,Ing Computacion
+;I Semestre 2017
+;IC-3101 Arquitectura de Computadores 
+;AUTORES: Marlon Reyes Montero
+;         Joaquín Mena Montero
+;PROFESOR: Esteban Arias Mendez
+;RESUMEN DEL PROGROMA: Convertir Cifras de texto a números y viceversa y verificar que sean caracteres validos,
+;                      Si el texto ingresado son solo numeros, retorna un valor entero
+;                      En caso de recibir caracteres que combinan letras con números o solo letras o simbolos
+;                      , debera escribir el valor recibido en codigo hexadeciamales y letras en mayuscula
+;                     
+;                     
 ;
-;           Objectivo: 
-;                   
-;           Entrada:
-;           Salida: 
 %include "io.mac"
 	
 .DATA

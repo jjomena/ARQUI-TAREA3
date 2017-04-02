@@ -1,9 +1,13 @@
-;Uppercase conversion of characters   TOUPPER.ASM
+;TEC,Cartago,Ing Computacion
+;I Semestre 2017
+;IC-3101 Arquitectura de Computadores 
+;AUTORES: Marlon Reyes Montero
+;         Joaquín Mena Montero
+;PROFESOR: Esteban Arias Mendez
+;RESUMEN DEL PROGROMA: El usuario ingresa diez números, el sistema verifica que no ocurra overflow
+;                      en caso contrario se muestra un mensaje de error y pregunta si desea intentar
+;                      de nuevo
 ;
-;        Objective: 
-;                   
-;            Input: 
-;           Output: 
 %include "io.mac"
 	
 .DATA
