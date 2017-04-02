@@ -8,6 +8,8 @@
 
 .UDATA
 ;sin uniciar
+user_name resb 16
+response  resb 1
 
 	
 .DATA
@@ -31,7 +33,7 @@ fin  db '$'
         mov      CX, 9        ;Contador para que imprima los 8 bits juntos
         mov      AL, [EBX]    ;Le el valor de la direccion que apunta EBX
         cmp      Al, '$'      ;Condicion de parada
-        je       salir        ;Salir
+        je       program      ;Secuencia normal del programa
         
             
       celdaMemoria:           ;Procesa cada valor guardado el el segmento
@@ -56,7 +58,26 @@ fin  db '$'
         shl     AL, 1         ;Realiza un corrimiento hacia la izquierda para quitar el bit evaluado
         PutCh   '1'           ;imprime un 1
         loop    celdaMemoria  ;repite 
-   
-      salir:
-              nwln 
-              .EXIT
+
+program:   
+    nwln
+    PutStr name_msg
+    GetStr user_name,16
+
+ask_count:
+    PutStr query_msg
+    GetInt CX
+    PutStr confirm_msg1
+    PutInt CX
+    PutStr confirm_msg2
+    GetCh [response]
+    cmp byte[response],'y'
+    jne ask_count
+
+display_msg:
+    PutStr welcome_msg
+    PutStr user_name
+    nwln
+    loop display_msg
+    .EXIT
+      
